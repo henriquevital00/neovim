@@ -1,0 +1,4 @@
+class {{FILE}}():
+
+    def __init__:
+
