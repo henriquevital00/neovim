@@ -11,7 +11,7 @@
 
 
 filetype plugin on
-
+set spell
 " ===================================Plugins=================================={{{
 " ____  _             _           "
 "|  _ \| |_   _  __ _(_)_ __  ___ "
@@ -130,11 +130,6 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'rhysd/vim-clang-format'
 Plug 'vim-scripts/a.vim'
 "}}}
-" Markdown {{{
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'dhruvasagar/vim-table-mode'
-"}}}
 " Programming: Plugins Related to HTML e CSS {{{
 Plug 'ap/vim-css-color'
 Plug 'mattn/emmet-vim'
@@ -142,6 +137,9 @@ Plug 'othree/html5.vim'
 "}}}
 " ==================================Markdown================================={{{
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+"}}}
+" ==================================VTerm================================={{{
+Plug 'vimlab/split-term.vim'
 "}}}
 call plug#end()
 "}}}
@@ -258,7 +256,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-map bn :bn<cr>
+nnoremap bn :bn<cr>
 set mouse=
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -288,6 +286,11 @@ function! SetRNU()
 endfunction
 "}}}
 
+"################# VTerm Config  ##################{{{
+nnoremap <leader>t :Term zsh<cr>
+nnoremap <leader>vt :VTerm zsh<cr>
+nnoremap <leader>tt :TTerm zsh<cr>
+"}}}
 "################# Indentation  ##################{{{
 
 set autoindent
