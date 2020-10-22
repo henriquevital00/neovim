@@ -267,7 +267,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 autocmd FileType python nnoremap <buffer> <F5> :w<cr>:exec '!python3 %' shellescape(@%, 1)<cr>
 autocmd FileType sh nnoremap <buffer> <F5> :w<cr>:exec '!bash %' shellescape(@%, 1)<cr>
 
-"################ Number Column ##################{{{
+"################ Number Column ##########################{{{
 " numbers
 set number " see the line number column
 
@@ -458,7 +458,26 @@ nnoremap <leader><Space> :StripWhitespace<CR>
 let g:instant_markdown_port = 8888
 "let g:instant_markdown_python = 1
 "}}}
-
+"################# Vim-Better-WhiteSpace  #################{{{
+let g:strip_whitespace_on_save = 1
+let g:strip_whitespace_confirm=0
+"}}}
+"################# Undo-Tree  #################{{{
+nnoremap <leader>u :UndotreeShow<CR>
+"}}}
+"################# Neovim config file  #################{{{
+" Command to go to neovim configurations
+nnoremap <leader>gc :e ~/.config/nvim/init.vim<CR>
+"}}}
+"################# A config  #################{{{
+nnoremap <leader>a :A
+nnoremap <leader>va :AS
+"}}}
+"################# Search Files  #################{{{
+nnoremap <C-p> :GFiles<CR>
+nmap <s-p> :Files<CR>
+"}}}
+"
 " fzf.vim
 let g:fzf_preview_window = ''
 
@@ -466,9 +485,6 @@ let g:fzf_preview_window = ''
 let g:hcl_fmt_autosave = 1
 let g:tf_fmt_autosave = 1
 let g:nomad_fmt_autosave = 1
-
-"undoTree
-nnoremap <leader>u :UndotreeShow<CR>
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
@@ -481,14 +497,9 @@ let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#autoformat = 0
 "autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
-nnoremap <C-p> :GFiles<CR>
-"nmap <s-p> :Rg<CR>
-nmap <s-p> :Files<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
-" Command to go to neovim configurations
-nnoremap <leader>gc :e ~/.config/nvim/init.vim<CR>
 
 "Command to zoom a split window
 nnoremap <silent> <C-w>w :ZoomWin<CR>
