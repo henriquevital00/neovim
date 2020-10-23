@@ -60,6 +60,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tibabit/vim-templates'
 "}}}
+" ==================================Customize neovim initial page================================={{{
+Plug 'mhinz/vim-startify'
+"}}}
 " ==================================Syntax checker and autocomplete================================={{{
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
