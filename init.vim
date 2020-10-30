@@ -55,19 +55,19 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'jiangmiao/auto-pairs'
-Plug 'vim-scripts/ZoomWin'
+Plug 'markstory/vim-zoomwin'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tibabit/vim-templates'
 "}}}
-" ==================================Customize neovim initial page================================={{{
+" ====================================Customize neovim initial page================================={{{
 Plug 'mhinz/vim-startify'
 "}}}
 " ==================================Syntax checker and autocomplete================================={{{
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 "}}}
-" ==================================Color-Schemes================================={{{
+" ==================================    Color-Schemes  ============================================={{{
 "  ____      _            ____       _
 " / ___|___ | | ___  _ __/ ___|  ___| |__   ___ _ __ ___   ___  ___
 "| |   / _ \| |/ _ \| '__\___ \ / __| '_ \ / _ \ '_ ` _ \ / _ \/ __|
@@ -83,7 +83,7 @@ if exists('+termguicolors')
 endif
 let g:gruvbox_invert_selection='0'
 "}}}
-" ==================================Snippets================================={{{
+" ==================================Snippets============================================={{{
 " ____  _   _ ___ ____  ____  _____ _____ ____
 "/ ___|| \ | |_ _|  _ \|  _ \| ____|_   _/ ___|
 "\___ \|  \| || || |_) | |_) |  _|   | | \___ \
@@ -255,6 +255,8 @@ set termguicolors
 set shortmess+=c
 set signcolumn=yes
 set noshowmode
+set ignorecase
+set smartcase
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -479,6 +481,11 @@ nnoremap <leader>va :AS
 "################# Search Files  #################{{{
 nnoremap <C-p> :GFiles<CR>
 nmap <s-p> :Files<CR>
+nnoremap <s-r> :Rg<CR>
+"}}}
+" ==================================Zoom window================================={{{
+"Command to zoom a split window
+nnoremap <leader>z :ZoomToggle<CR>
 "}}}
 "
 " fzf.vim
@@ -504,8 +511,6 @@ nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
 
-"Command to zoom a split window
-nnoremap <silent> <C-w>w :ZoomWin<CR>
 
 
 "Snippets
