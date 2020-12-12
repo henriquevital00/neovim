@@ -141,7 +141,10 @@ Plug 'othree/html5.vim'
 " ==================================Markdown================================={{{
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 "}}}
-" ==================================VTerm================================={{{
+" ==================================NERDTree================================={{{
+Plugin 'preservim/nerdtree'
+"}}}
+"" ==================================VTerm================================={{{
 Plug 'vimlab/split-term.vim'
 "}}}
 call plug#end()
@@ -481,6 +484,9 @@ nnoremap <leader>va :AS
 nnoremap <C-p> :GFiles<CR>
 nmap <s-p> :Files<CR>
 nnoremap <s-r> :Rg<CR>
+"}}}
+"################# NERDTree  #################{{{
+nnoremap <leader>o :NERDTree<cr>
 "}}}
 " ==================================Zoom window================================={{{
 "Command to zoom a split window
